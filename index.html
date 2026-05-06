@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Next Level Sliding Jacket</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell" aria-live="polite">
+    <section class="showcase" style="--theme: #72c958; --theme-deep: #23820f; --image-filter: none;">
+      <header class="header">
+        <a href="#" class="brand" aria-label="Nike home">
+          <span class="swoosh"></span>
+          <span>NIKE</span>
+        </a>
+
+        <button class="menu-button" type="button" aria-label="Open menu">
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="#" class="active">Home</a>
+          <a href="#">Categories</a>
+          <a href="#">About Us</a>
+          <a href="#">Special</a>
+          <a href="#">Contact</a>
+        </nav>
+
+        <div class="actions" aria-label="Quick actions">
+          <button class="icon-button" type="button" aria-label="Search">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.3-4.3m1.3-5.2a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Z"/></svg>
+          </button>
+          <button class="icon-button" type="button" aria-label="Shopping bag">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.5h11l1 11h-13l1-11Z"/><path d="M9 8.5a3 3 0 0 1 6 0"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="visual-mark" aria-hidden="true"></div>
+
+      <section class="hero">
+        <div class="copy-block">
+          <p class="eyebrow">Winter collection</p>
+          <h1 id="product-title">Resistance</h1>
+          <p id="product-copy">Jackets designed to withstand anything. Durable materials, reinforced seams, and wind and rain protection to accompany you through any challenge.</p>
+        </div>
+
+        <div class="product-stage">
+          <img id="product-image" src="assets/jacket-green.jpg" alt="Green padded hooded jacket">
+        </div>
+
+        <div class="purchase-block">
+          <p class="price" id="product-price">$105.00</p>
+          <button class="buy-button" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.5h11l1 11h-13l1-11Z"/><path d="M9 8.5a3 3 0 0 1 6 0"/></svg>
+            Buy Now
+          </button>
+        </div>
+      </section>
+
+      <div class="slider-controls" aria-label="Product slides">
+        <button class="slide-dot active" type="button" aria-label="Show Resistance jacket" data-slide="0"></button>
+        <button class="slide-dot" type="button" aria-label="Show Glacial jacket" data-slide="1"></button>
+        <button class="slide-dot" type="button" aria-label="Show Ember jacket" data-slide="2"></button>
+        <button class="slide-dot" type="button" aria-label="Show Shadow jacket" data-slide="3"></button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
