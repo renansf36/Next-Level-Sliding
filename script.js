@@ -2,46 +2,46 @@ const products = [
   {
     id: "resistance",
     title: "Resistance",
-    copy: "Jackets designed to withstand anything. Durable materials, reinforced seams, and wind and rain protection to accompany you through any challenge.",
-    price: 105,
+    copy: "Jaquetas criadas para enfrentar qualquer clima. Materiais duráveis, costuras reforçadas e proteção contra vento e chuva para acompanhar você em qualquer desafio.",
+    price: 529,
     stock: 18,
     theme: "#72c958",
     deep: "#23820f",
     filter: "none",
-    label: "Green padded hooded jacket"
+    label: "Jaqueta verde acolchoada com capuz"
   },
   {
     id: "glacial",
     title: "Glacial",
-    copy: "Warm puffer volume with a smooth insulated shell, made for cold commutes and fast-moving city days.",
-    price: 118,
+    copy: "Volume acolchoado e quente com acabamento macio, feito para dias frios na cidade e deslocamentos com conforto.",
+    price: 589,
     stock: 12,
     theme: "#7fcde2",
     deep: "#176b92",
     filter: "hue-rotate(112deg) saturate(.92) brightness(1.04)",
-    label: "Blue padded hooded jacket"
+    label: "Jaqueta azul acolchoada com capuz"
   },
   {
     id: "ember",
     title: "Ember",
-    copy: "A bold thermal layer with high loft padding, soft cuffs, and a protective hood for low-temperature runs.",
-    price: 112,
+    copy: "Camada térmica marcante com enchimento leve, punhos macios e capuz protetor para temperaturas baixas.",
+    price: 559,
     stock: 9,
     theme: "#e57952",
     deep: "#9a351e",
     filter: "hue-rotate(252deg) saturate(1.08) brightness(1.03)",
-    label: "Orange padded hooded jacket"
+    label: "Jaqueta laranja acolchoada com capuz"
   },
   {
     id: "shadow",
     title: "Shadow",
-    copy: "Minimal weatherproof construction, compact storage, and deep pockets for everyday performance.",
-    price: 129,
+    copy: "Construção minimalista resistente ao clima, bolsos profundos e acabamento versátil para uso diário.",
+    price: 649,
     stock: 15,
     theme: "#7d838f",
     deep: "#29313d",
     filter: "grayscale(.72) saturate(.65) brightness(.82)",
-    label: "Dark padded hooded jacket"
+    label: "Jaqueta escura acolchoada com capuz"
   }
 ];
 
@@ -66,9 +66,9 @@ const checkoutForm = document.querySelector("[data-checkout-form]");
 const overlay = document.querySelector("[data-overlay]");
 const toast = document.querySelector("[data-toast]");
 
-const currency = new Intl.NumberFormat("en-US", {
+const currency = new Intl.NumberFormat("pt-BR", {
   style: "currency",
-  currency: "USD"
+  currency: "BRL"
 });
 
 let currentSlide = 0;
@@ -93,7 +93,7 @@ function setSlide(index) {
   title.textContent = product.title;
   copy.textContent = product.copy;
   price.textContent = currency.format(product.price);
-  stock.textContent = `${product.stock} in stock`;
+  stock.textContent = `${product.stock} em estoque`;
   image.alt = product.label;
 
   dots.forEach((dot, dotIndex) => {
@@ -138,7 +138,7 @@ addToCartButton.addEventListener("click", () => {
 
   saveCart();
   renderCart();
-  showToast(`${product.title} size ${selectedSize} added to cart`);
+  showToast(`${product.title} tamanho ${selectedSize} adicionada ao carrinho`);
   openCart();
 });
 
@@ -165,7 +165,7 @@ checkoutForm.addEventListener("submit", (event) => {
   renderCart();
   checkoutForm.reset();
   closePanels();
-  showToast(`Order placed. Thanks, ${name}!`);
+  showToast(`Pedido realizado. Obrigado, ${name}!`);
 });
 
 cartItems.addEventListener("click", (event) => {
@@ -208,21 +208,21 @@ function renderCart() {
   }).filter((item) => item.product);
 
   if (!enrichedCart.length) {
-    cartItems.innerHTML = `<p class="empty-cart">Your cart is empty. Choose a jacket size and add it to start an order.</p>`;
+    cartItems.innerHTML = `<p class="empty-cart">Seu carrinho está vazio. Escolha o tamanho da jaqueta e adicione para iniciar o pedido.</p>`;
   } else {
     cartItems.innerHTML = enrichedCart.map((item) => `
       <article class="cart-item">
         <img src="assets/jacket-green.jpg" alt="${item.product.label}" style="--item-filter: ${item.product.filter};">
         <div>
           <h3>${item.product.title}</h3>
-          <p>Size ${item.size} / ${currency.format(item.product.price)}</p>
+          <p>Tamanho ${item.size} / ${currency.format(item.product.price)}</p>
           <div class="cart-item-footer">
             <strong>${currency.format(item.product.price * item.quantity)}</strong>
-            <div class="cart-item-actions" aria-label="Quantity controls">
-              <button type="button" data-action="decrease" data-key="${item.key}" aria-label="Decrease quantity">-</button>
+            <div class="cart-item-actions" aria-label="Controles de quantidade">
+              <button type="button" data-action="decrease" data-key="${item.key}" aria-label="Diminuir quantidade">-</button>
               <span>${item.quantity}</span>
-              <button type="button" data-action="increase" data-key="${item.key}" aria-label="Increase quantity">+</button>
-              <button type="button" data-action="remove" data-key="${item.key}" aria-label="Remove item">x</button>
+              <button type="button" data-action="increase" data-key="${item.key}" aria-label="Aumentar quantidade">+</button>
+              <button type="button" data-action="remove" data-key="${item.key}" aria-label="Remover item">x</button>
             </div>
           </div>
         </div>

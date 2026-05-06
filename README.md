@@ -2,15 +2,15 @@
 
 Landing page interativa inspirada no projeto "Next Level Sliding Jacket Landing Page With a Brutal Smooth Effect", do canal Bedimcode.
 
-## Preview
+## Prévia
 
 O projeto reproduz uma vitrine de jaqueta com:
 
 - layout hero inspirado em uma landing page Nike
-- slider automatico com 4 estados de produto
-- indicadores clicaveis
-- selecao de tamanho
-- carrinho funcional com persistencia local
+- slider automático com 4 estados de produto
+- indicadores clicáveis
+- seleção de tamanho
+- carrinho funcional com persistência local
 - checkout simulado
 - transicoes suaves de texto, preco, cor e imagem
 - layout responsivo para desktop e mobile
@@ -38,9 +38,9 @@ Next-Level-Sliding/
 
 Abra o arquivo `index.html` diretamente no navegador.
 
-Tambem e possivel usar uma extensao como Live Server no VS Code para visualizar o projeto com recarregamento automatico.
+Também é possível usar uma extensão como Live Server no VS Code para visualizar o projeto com recarregamento automático.
 
-## Referencia
+## Referência
 
-Video original:
+Vídeo original:
 https://www.youtube.com/watch?v=SjkEwfzXjzE

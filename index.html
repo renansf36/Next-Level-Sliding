@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,24 +18,24 @@
           <span>NIKE</span>
         </a>
 
-        <button class="menu-button" type="button" aria-label="Open menu">
+        <button class="menu-button" type="button" aria-label="Abrir menu">
           <span></span>
           <span></span>
         </button>
 
         <nav class="nav" aria-label="Primary navigation">
-          <a href="#" class="active">Home</a>
-          <a href="#">Categories</a>
-          <a href="#">About Us</a>
-          <a href="#">Special</a>
-          <a href="#">Contact</a>
+          <a href="#" class="active">Início</a>
+          <a href="#">Categorias</a>
+          <a href="#">Sobre Nós</a>
+          <a href="#">Ofertas</a>
+          <a href="#">Contato</a>
         </nav>
 
         <div class="actions" aria-label="Quick actions">
-          <button class="icon-button" type="button" aria-label="Search">
+          <button class="icon-button" type="button" aria-label="Buscar">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.3-4.3m1.3-5.2a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Z"/></svg>
           </button>
-          <button class="icon-button cart-toggle" type="button" aria-label="Shopping bag">
+          <button class="icon-button cart-toggle" type="button" aria-label="Sacola de compras">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.5h11l1 11h-13l1-11Z"/><path d="M9 8.5a3 3 0 0 1 6 0"/></svg>
             <span class="cart-count" data-cart-count>0</span>
           </button>
@@ -46,52 +46,52 @@
 
       <section class="hero">
         <div class="copy-block" aria-live="polite">
-          <p class="eyebrow">Winter collection</p>
+          <p class="eyebrow">Coleção de inverno</p>
           <h1 id="product-title">Resistance</h1>
-          <p id="product-copy">Jackets designed to withstand anything. Durable materials, reinforced seams, and wind and rain protection to accompany you through any challenge.</p>
+          <p id="product-copy">Jaquetas criadas para enfrentar qualquer clima. Materiais duráveis, costuras reforçadas e proteção contra vento e chuva para acompanhar você em qualquer desafio.</p>
         </div>
 
         <div class="product-stage">
-          <img id="product-image" src="assets/jacket-green.jpg" alt="Green padded hooded jacket">
+          <img id="product-image" src="assets/jacket-green.jpg" alt="Jaqueta verde acolchoada com capuz">
         </div>
 
         <div class="purchase-block">
-          <p class="price" id="product-price">$105.00</p>
+          <p class="price" id="product-price">R$ 529,00</p>
           <div class="product-options">
             <div class="option-group">
-              <span>Size</span>
-              <div class="size-options" aria-label="Choose size">
+              <span>Tamanho</span>
+              <div class="size-options" aria-label="Escolher tamanho">
                 <button class="size-option active" type="button" data-size="S">S</button>
                 <button class="size-option" type="button" data-size="M">M</button>
                 <button class="size-option" type="button" data-size="L">L</button>
                 <button class="size-option" type="button" data-size="XL">XL</button>
               </div>
             </div>
-            <p class="stock-line" id="product-stock">18 in stock</p>
+            <p class="stock-line" id="product-stock">18 em estoque</p>
           </div>
           <button class="buy-button" type="button" id="add-to-cart">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.5h11l1 11h-13l1-11Z"/><path d="M9 8.5a3 3 0 0 1 6 0"/></svg>
-            Add to Cart
+            Adicionar
           </button>
         </div>
       </section>
 
       <div class="slider-controls" aria-label="Product slides">
-        <button class="slide-dot active" type="button" aria-label="Show Resistance jacket" data-slide="0"></button>
-        <button class="slide-dot" type="button" aria-label="Show Glacial jacket" data-slide="1"></button>
-        <button class="slide-dot" type="button" aria-label="Show Ember jacket" data-slide="2"></button>
-        <button class="slide-dot" type="button" aria-label="Show Shadow jacket" data-slide="3"></button>
+        <button class="slide-dot active" type="button" aria-label="Mostrar jaqueta Resistance" data-slide="0"></button>
+        <button class="slide-dot" type="button" aria-label="Mostrar jaqueta Glacial" data-slide="1"></button>
+        <button class="slide-dot" type="button" aria-label="Mostrar jaqueta Ember" data-slide="2"></button>
+        <button class="slide-dot" type="button" aria-label="Mostrar jaqueta Shadow" data-slide="3"></button>
       </div>
     </section>
   </main>
 
-  <aside class="cart-drawer" aria-hidden="true" aria-label="Shopping cart">
+  <aside class="cart-drawer" aria-hidden="true" aria-label="Carrinho de compras">
     <div class="drawer-header">
       <div>
-        <p class="drawer-kicker">Your order</p>
-        <h2>Cart</h2>
+        <p class="drawer-kicker">Seu pedido</p>
+        <h2>Carrinho</h2>
       </div>
-      <button class="drawer-close" type="button" aria-label="Close cart">x</button>
+      <button class="drawer-close" type="button" aria-label="Fechar carrinho">x</button>
     </div>
 
     <div class="cart-items" data-cart-items></div>
@@ -102,50 +102,50 @@
         <strong data-subtotal>$0.00</strong>
       </div>
       <div>
-        <span>Shipping</span>
+        <span>Frete</span>
         <strong data-shipping>$0.00</strong>
       </div>
       <div class="summary-total">
         <span>Total</span>
         <strong data-total>$0.00</strong>
       </div>
-      <button class="checkout-button" type="button" data-checkout disabled>Checkout</button>
+      <button class="checkout-button" type="button" data-checkout disabled>Finalizar compra</button>
     </div>
   </aside>
 
   <div class="overlay" data-overlay></div>
 
-  <section class="checkout-modal" aria-hidden="true" aria-label="Checkout form">
+  <section class="checkout-modal" aria-hidden="true" aria-label="Formulário de finalização da compra">
     <form class="checkout-form" data-checkout-form>
       <div class="drawer-header">
         <div>
-          <p class="drawer-kicker">Secure checkout</p>
-          <h2>Delivery</h2>
+          <p class="drawer-kicker">Compra segura</p>
+          <h2>Entrega</h2>
         </div>
-        <button class="drawer-close" type="button" data-close-checkout aria-label="Close checkout">x</button>
+        <button class="drawer-close" type="button" data-close-checkout aria-label="Fechar checkout">x</button>
       </div>
 
       <label>
-        Full name
+        Nome completo
         <input type="text" name="name" autocomplete="name" required>
       </label>
       <label>
-        Email
+        E-mail
         <input type="email" name="email" autocomplete="email" required>
       </label>
       <label>
-        Address
+        Endereço
         <input type="text" name="address" autocomplete="street-address" required>
       </label>
       <label>
-        Delivery method
+        Método de entrega
         <select name="delivery" required>
-          <option value="standard">Standard delivery</option>
-          <option value="express">Express delivery</option>
+          <option value="standard">Entrega padrão</option>
+          <option value="express">Entrega expressa</option>
         </select>
       </label>
 
-      <button class="checkout-button" type="submit">Place Order</button>
+      <button class="checkout-button" type="submit">Concluir pedido</button>
     </form>
   </section>
 
