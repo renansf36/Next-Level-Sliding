@@ -72,7 +72,7 @@ const currency = new Intl.NumberFormat("pt-BR", {
 });
 
 let currentSlide = 0;
-let selectedSize = "S";
+let selectedSize = "P";
 let cart = loadCart();
 let slideTimer = window.setInterval(showNextSlide, 4800);
 
