@@ -9,6 +9,9 @@ O projeto reproduz uma vitrine de jaqueta com:
 - layout hero inspirado em uma landing page Nike
 - slider automatico com 4 estados de produto
 - indicadores clicaveis
+- selecao de tamanho
+- carrinho funcional com persistencia local
+- checkout simulado
 - transicoes suaves de texto, preco, cor e imagem
 - layout responsivo para desktop e mobile
 

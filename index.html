@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="page-shell" aria-live="polite">
+  <main class="page-shell">
     <section class="showcase" style="--theme: #72c958; --theme-deep: #23820f; --image-filter: none;">
       <header class="header">
         <a href="#" class="brand" aria-label="Nike home">
@@ -35,8 +35,9 @@
           <button class="icon-button" type="button" aria-label="Search">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.3-4.3m1.3-5.2a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Z"/></svg>
           </button>
-          <button class="icon-button" type="button" aria-label="Shopping bag">
+          <button class="icon-button cart-toggle" type="button" aria-label="Shopping bag">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.5h11l1 11h-13l1-11Z"/><path d="M9 8.5a3 3 0 0 1 6 0"/></svg>
+            <span class="cart-count" data-cart-count>0</span>
           </button>
         </div>
       </header>
@@ -44,7 +45,7 @@
       <div class="visual-mark" aria-hidden="true"></div>
 
       <section class="hero">
-        <div class="copy-block">
+        <div class="copy-block" aria-live="polite">
           <p class="eyebrow">Winter collection</p>
           <h1 id="product-title">Resistance</h1>
           <p id="product-copy">Jackets designed to withstand anything. Durable materials, reinforced seams, and wind and rain protection to accompany you through any challenge.</p>
@@ -56,9 +57,21 @@
 
         <div class="purchase-block">
           <p class="price" id="product-price">$105.00</p>
-          <button class="buy-button" type="button">
+          <div class="product-options">
+            <div class="option-group">
+              <span>Size</span>
+              <div class="size-options" aria-label="Choose size">
+                <button class="size-option active" type="button" data-size="S">S</button>
+                <button class="size-option" type="button" data-size="M">M</button>
+                <button class="size-option" type="button" data-size="L">L</button>
+                <button class="size-option" type="button" data-size="XL">XL</button>
+              </div>
+            </div>
+            <p class="stock-line" id="product-stock">18 in stock</p>
+          </div>
+          <button class="buy-button" type="button" id="add-to-cart">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.5h11l1 11h-13l1-11Z"/><path d="M9 8.5a3 3 0 0 1 6 0"/></svg>
-            Buy Now
+            Add to Cart
           </button>
         </div>
       </section>
@@ -71,6 +84,72 @@
       </div>
     </section>
   </main>
+
+  <aside class="cart-drawer" aria-hidden="true" aria-label="Shopping cart">
+    <div class="drawer-header">
+      <div>
+        <p class="drawer-kicker">Your order</p>
+        <h2>Cart</h2>
+      </div>
+      <button class="drawer-close" type="button" aria-label="Close cart">x</button>
+    </div>
+
+    <div class="cart-items" data-cart-items></div>
+
+    <div class="cart-summary">
+      <div>
+        <span>Subtotal</span>
+        <strong data-subtotal>$0.00</strong>
+      </div>
+      <div>
+        <span>Shipping</span>
+        <strong data-shipping>$0.00</strong>
+      </div>
+      <div class="summary-total">
+        <span>Total</span>
+        <strong data-total>$0.00</strong>
+      </div>
+      <button class="checkout-button" type="button" data-checkout disabled>Checkout</button>
+    </div>
+  </aside>
+
+  <div class="overlay" data-overlay></div>
+
+  <section class="checkout-modal" aria-hidden="true" aria-label="Checkout form">
+    <form class="checkout-form" data-checkout-form>
+      <div class="drawer-header">
+        <div>
+          <p class="drawer-kicker">Secure checkout</p>
+          <h2>Delivery</h2>
+        </div>
+        <button class="drawer-close" type="button" data-close-checkout aria-label="Close checkout">x</button>
+      </div>
+
+      <label>
+        Full name
+        <input type="text" name="name" autocomplete="name" required>
+      </label>
+      <label>
+        Email
+        <input type="email" name="email" autocomplete="email" required>
+      </label>
+      <label>
+        Address
+        <input type="text" name="address" autocomplete="street-address" required>
+      </label>
+      <label>
+        Delivery method
+        <select name="delivery" required>
+          <option value="standard">Standard delivery</option>
+          <option value="express">Express delivery</option>
+        </select>
+      </label>
+
+      <button class="checkout-button" type="submit">Place Order</button>
+    </form>
+  </section>
+
+  <p class="toast" data-toast role="status" aria-live="polite"></p>
 
   <script src="script.js"></script>
 </body>
